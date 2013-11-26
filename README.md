@@ -1,6 +1,6 @@
-# grunt-browser-screenshot
+# grunt-stackshots
 
-> The best Grunt plugin ever.
+> Grunt plugin to generate screenshots from BrowserStack.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -8,18 +8,18 @@ This plugin requires Grunt `~0.4.1`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-browser-screenshot --save-dev
+npm install grunt-stackshots --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-browser-screenshot');
+grunt.loadNpmTasks('grunt-stackshots');
 ```
 
-## The "browser_screenshot" task
+## The "stackshots" task
 
 ### Overview
-In your project's Gruntfile, add a section named `browser_screenshot` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `stackshots` to the data object passed into `grunt.initConfig()`.
 
 To be added...

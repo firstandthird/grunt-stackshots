@@ -12,8 +12,10 @@ module.exports = function(grunt) {
 
   var fs = require('fs')
     , url = require('url')
-    , BrowserScreenshot = require('browserscreenshot')
+    , BrowserScreenshot = require('stackshots')
     , file = grunt.file;
+
+  var async = require('async');
 
   function getAuthData(authKey) {
     var temp, authData = null;
@@ -37,7 +39,7 @@ module.exports = function(grunt) {
     return result
   }
 
-  grunt.registerMultiTask('browser_screenshot', 'Get screenshots from BrowserStack', function() {
+  grunt.registerMultiTask('stackshots', 'Get screenshots from BrowserStack', function() {
     var authData = getAuthData(this.data.authKey)
       , browserStackClient
       , self = this
@@ -73,7 +75,7 @@ module.exports = function(grunt) {
             });
           });
 
-          grunt.util.async.series(functions,function(){
+          async.series(functions,function(){
             grunt.log.ok('All urls have been downloaded!');
             done();
           });

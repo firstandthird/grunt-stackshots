@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    browser_screenshot: {
+    stackshots: {
       request : {
         authKey : 'key1',
         dest : 'tmp/',
@@ -61,9 +61,9 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'browser_screenshot', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'stackshots', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['browser_screenshot']);
+  grunt.registerTask('default', ['stackshots']);
 
 };
